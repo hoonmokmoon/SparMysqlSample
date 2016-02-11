@@ -19,9 +19,6 @@ object MysqlSample {
     val sc = new SparkContext(conf)
     val sqlc = new HiveContext(sc)
     //Class.forName("com.mysql.jdbc.Driver").newInstance
-//    val jdbcDF = sqlc.read.format("jdbc").options(
-//	Map("url"-> "jdbc:mysql://localhost:3306/mysql?user=root",
-//	   "dbtable" -> "user")).load()
     val jdbcDF = sqlc.read.jdbc(url,"user",props)
     println("count : " + jdbcDF.count())
   }
