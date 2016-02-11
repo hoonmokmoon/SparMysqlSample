@@ -16,7 +16,7 @@ sbt package
 
 ### result
 ```
-{spark_home}bin/spark-submit --jars /home/{userid}/.ivy2/cache/mysql/mysql-connector-java/jars/mysql-connector-java-5.1.31.jar --class MysqlSample --master local[*] sample/target/scala-2.11/sample_2.11-0.1.jar 
+{spark_home}bin/spark-submit --jars local:/home/{userid}/.ivy2/cache/mysql/mysql-connector-java/jars/mysql-connector-java-5.1.31.jar --class MysqlSample --master local[*] sample/target/scala-2.11/sample_2.11-0.1.jar 
 Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
 16/02/12 03:04:37 INFO SparkContext: Running Spark version 1.6.0
 16/02/12 03:04:38 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
